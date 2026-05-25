@@ -81,7 +81,7 @@ const updateBook = async (req, res, next) => {
         if (!hasChanges) {
             return res.status(400).json({
                 status: 400,
-                message: 'You must provide at least one field to update the book.'
+                message: 'You must provide at least one different field to update the book.'
             });
         }
         const book = {
