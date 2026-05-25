@@ -5,7 +5,7 @@ const doc = {
         title: 'Books API',
         description: 'API for managing books'
     },
-    host: 'project2-x3wt.onrender.com//books',
+    host: 'project2-x3wt.onrender.com/books',
     schemes: ['https']
 };
 
