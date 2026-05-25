@@ -1,0 +1,23 @@
+{
+  "name": "project2",
+  "version": "1.0.0",
+  "description": "Api Restful",
+  "homepage": "https://github.com/2002-02-20/Project2#readme",
+  "bugs": {
+    "url": "https://github.com/2002-02-20/Project2/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2002-02-20/Project2.git"
+  },
+  "license": "ISC",
+  "author": "Derek Moscui",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
