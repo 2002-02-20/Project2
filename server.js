@@ -3,9 +3,7 @@ const app = express();
 const mongodb = require('./data/database');
 app.use(express.json());
 app.use('/', require('./routes'));
-
-
-
+app.use(require('./middleware/errorHandler').errorHandler);
 
 const port = process.env.PORT || 3000;
 mongodb.initDb((err, db) => {
@@ -15,8 +13,8 @@ mongodb.initDb((err, db) => {
     } else {
         console.log('Database initialized');
     }
-
 });
+
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
