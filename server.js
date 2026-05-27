@@ -16,9 +16,7 @@ app.use('/', require('./routes'));
 
 app.use((req, res, next) => {
     const error = new Error('Route not found');
-
     error.status = 404;
-
     next(error);
 });
 app.use(errorHandler);

@@ -4,15 +4,15 @@ const router = express.Router();
 const booksController = require('../controllers/booksController');
 const { validateBookId, validateCreateBook } = require('../middleware/validation');
 
-// #swagger.path = '/books'
+// #swagger.tags = ['Books']
 router.get('/', booksController.getAllBooks);
-// #swagger.path = '/books/{id}'
+// #swagger.tags = ['Books']
 router.get('/:id', validateBookId, booksController.getSingleBook);
-// #swagger.path = '/books'
+// #swagger.tags = ['Books']
 router.post('/', validateCreateBook, booksController.createBook);
-// #swagger.path = '/books/{id}'
+// #swagger.tags = ['Books']
 router.put('/:id', validateBookId, validateCreateBook, booksController.updateBook);
-// #swagger.path = '/books/{id}'
+// #swagger.tags = ['Books']
 router.delete('/:id', validateBookId, booksController.deleteBook);
 
 module.exports = router;
